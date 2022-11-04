@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="theme-color" content="#bebebe">
+    <link rel="icon" href="./img/competencias.png">
+    <link rel="stylesheet" href="himan.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <title>Himan - converse com todo mundo</title>
+    <script src="./himan.js" defer></script>
+</head>
+<body>
+    <div id="screen">
+
+        <div id="wallpaperScreen" class="hide">
+            <div id="close-wallpaper"><i class="bi bi-x-lg" id="close"></i></div>
+            <div id="container-profile">
+                <input type="file" name="file" id="filewallpaper">
+                <p>tamanho requerido 940 x 455</p>
+                <img src="" alt="" style="width: 300px;" id="apresention-wallpaper">
+                <input type="submit" value="Upload" id="submitwallpaper">
+            </div>
+        </div>
+
+        <div id="profileScreen" class="hide">
+            <div id="close-profile"><i class="bi bi-x-lg"></i></div>
+            <div id="container-profile">
+                <input type="file" name="file" id="fileprofile">
+                <img src="./img/user.png" alt="" style="width: 300px;" id="apresention-profile">
+                <input type="submit" value="Upload" id="submit">
+            </div>
+        </div>
+
+        <div id="config" class="hide">
+            <div class="user-option">
+                <div class="options" id="modeBtn">Modo escudo</div>
+            </div>
+            <div class="user-option">
+                <div class="options" id="profileBtn">Alterar perfil</div>
+            </div>
+            <div class="user-option">
+                <div class="options">Mudar apelido</div>
+            </div>
+            <div class="user-option">
+                <div class="options" id="paperBtn">Papel de parede</div>
+            </div>
+            <div class="user-option">
+                <div class="options">Cor da conversa</div>
+            </div>
+        </div>
+
+        <div id="title">
+            <div class="line"></div>
+            <h3><i class="bi bi-person-video2"></i> Hi!man: converse com todo mundo</h3>
+            <div class="line"></div>
+        </div>
+        <aside style="width: 25%;">
+            <div>
+                <div class="input-group">
+                  <input type="text" id="search" class="form-control" placeholder="Procurar...">
+                  <span class="input-group-addon">
+                    <button id="searchBtn" class="fa fa-search" style="background:transparent;border:none"></button>
+                  </span>
+                </div>
+            </div>
+              <div class="container-users">
+                <main id="main" class="hide" style="margin: 0;">
+                </main>
+                    <div class="user">
+                        <div class="user-img">
+                            <img  class="user-profile" src="./img/user.png" alt="">
+                        </div>
+                        <div class="user-text">
+                            <h5 class="user-name">Liedson LB</h5>
+                            <p class="user-msg">você agora são amigos,  diga oi!</p>
+                        </div>
+                    </div>
+              </div>
+        </aside>
+        <main>
+            <header>
+                <div class="header-container">
+                    <div class="user-view hide">
+                        <div class="user-img">
+                            <img id="user-img-view" src="./img/user.png" alt="">
+                        </div>
+                        <div class="user-text">
+                            <h5 style="padding: 0;" id="user-name-view">Nome de usuario</h5>
+                            <p id="user-status">Online</p>
+                        </div>
+                </div>
+                <div class="call" style="width: 150px;">
+                    <a href=""><i class="bi bi-telephone"></i></a>
+                    <a href=""><i class="bi bi-camera-video"></i></a>
+                    <a style="cursor: pointer;" id="configBtn"><i class="bi bi-gear" id="configIcon"></i></a>
+                </div>
+                </div>
+            </header>
+            <div id="background" class="hide">
+                <div class="you-mesage">
+                    <div class="user-text" style="max-width: 300px;">
+                        <h5 style="max-width: 300px;">assistência</h5>
+                        <p style="max-width: 300px;">envie uma mensagem para testar</p>
+                    </div>
+                </div>
+            </div>
+            <div id="conversa" class="hide">
+                <div class="call" style="width: 50px;">
+                    <a href=""><i class="bi bi-emoji-neutral"></i></a>
+                </div>
+                <div class="input-group" style="width: 300px;">
+                    <input type="text" id="mesage" style="width: 300px;" class="form-control" placeholder="Digite uma mensagem">
+                    <span class="input-group-addon">
+                      <button id="send" style="background:transparent;border:none"><i class="bi bi-send" style="color: black;"></i></button>
+                    </span>
+                  </div>
+                  <div class="call">
+                    <a href=""><i class="bi bi-image"></i></a>
+                    <a href=""><i class="bi bi-camera"></i></a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
