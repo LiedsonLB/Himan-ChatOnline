@@ -87,6 +87,21 @@ main {
     background: #333333;
     color: #fff;
 }
+#submitwallpaper {
+    border-right: none;
+    background: #f0eded;
+    border: none;
+    box-shadow: none;
+    font-family: system-ui;
+    text-shadow: 0 0 2px grey;
+    border-radius: 16px;
+    opacity: 1 !important;
+    padding: 5px 0px;
+}
+#submitwallpaper:hover {
+    background: #333333;
+    color: #fff;
+}
 #config {
     z-index: 10;
     background-color: #bebebe;
@@ -120,7 +135,7 @@ main {
     display: grid;
     grid-template-columns: 25% 75%;
     grid-template-rows: 8% 92%;
-    background: #d1d1d1;
+    background: linear-gradient(178deg, #b7b5b5 10% , #f0eded 80%, #a39a9a) 10%;
 }
 #title {
     margin-top: 1px !important;
@@ -300,7 +315,7 @@ header {
 }
 #background {
     height: 495.23px;
-    background: #f0eded;
+    background: url(https://images.hdqwalls.com/download/anime-scenery-sunset-4k-xp-2880x1800.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     overflow-y: scroll;

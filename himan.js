@@ -21,7 +21,7 @@ const user = document.querySelector(".user");
         const configIcon = document.getElementById("configIcon");
         const config = document.getElementById("config");
         config.classList.toggle("hide");
-        configBtn.classList.toggle("focus")
+        configBtn.classList.toggle("focus");
     });
     configBtn.addEventListener("blur", () =>{
         const config = document.getElementById("config");
@@ -93,6 +93,9 @@ const user = document.querySelector(".user");
         submitFile.addEventListener('click', () => {
             userProfile.src = reader.result;
             profileScreen.classList.add("hide");
+            const usernameView = document.getElementById("user-name-view");
+            const userimgView = document.getElementById("user-img-view");
+            userimgView.src = userProfile.src;          
         })
     })
     //sair do enviar perfil
@@ -181,7 +184,6 @@ sendBtn.addEventListener('click', function(){
             movieEl.classList.add("user");
     
             movieEl.innerHTML = `
-            <div class="user">
             <div class="user-img">
             <img src="${IMGPATH + poster_path}" class="user-profile"/>
             </div>
@@ -190,14 +192,10 @@ sendBtn.addEventListener('click', function(){
             <h5 class="user-name">${title}</h5>
             <p class="user-msg">me adicione e vamos conversar!</p>
             </div>
-            </div>
             `;
 
-            const usercontainer = document.querySelector(".container-users");
-            main.appendChild(movieEl)
-            movieEl.addEventListener("click", () => {
-                usercontainer.appendChild(movieEl);
-            })
+            main.appendChild(movieEl);
+
         });}
     
         search.addEventListener('keyup', (e)=> {
@@ -226,12 +224,16 @@ sendBtn.addEventListener('click', function(){
         user.addEventListener("click", ()=> {
             const userView = document.querySelector(".user-view");
             const conversa = document.getElementById("conversa");
-            const usernameView = document.getElementById("user-name-view");
+            const usernameView = document.querySelector(".user-name-view");
             const userimgView = document.getElementById("user-img-view");
             userimgView.src = userProfile.src;          
             usernameView.innerText = username.innerText;
             userView.classList.remove("hide");
             background.classList.remove("hide");
             conversa.classList.remove("hide");
-            user.classList.add("focus")
+            user.classList.add("focus");
+            if(user != user){
+                userimgView.src = userProfile.src;          
+                usernameView.innerText = username.innerText;
+            };
         });
