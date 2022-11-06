@@ -71,10 +71,10 @@ const user = document.querySelector(".user");
     const profileBtn = document.getElementById("profileBtn")
 
     profileBtn.addEventListener("click", () => {
-        profileScreen.classList.toggle("hide");
+        profileScreen.classList.remove("hide");
         const config = document.getElementById("config");
-        config.classList.toggle("hide");
-        configBtn.classList.toggle("focus")
+        config.classList.add("hide");
+        configBtn.classList.toggle("focus");
     })
     // adicionando foto de perfil
     const fileprofile = document.getElementById("fileprofile")
